@@ -90,6 +90,9 @@ h1 {
     .hamburger {
         display: none;
     }
+    .logo a {
+        font-size: smaller;
+    } 
 }
 
 html.dark {
