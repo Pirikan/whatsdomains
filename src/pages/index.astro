@@ -1,18 +1,7 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Welcome";
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type ="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content = {Astro.generator} >
-    <title>What's domains.com</title>
-  </head>
-  <body>
-	<a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <h1>What's domains.com</h1>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<h2>My awesome blog subtitle</h2>
+</BaseLayout>
