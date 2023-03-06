@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import BlogPost from '../../components/BlogPost.astro';
-import DomainsCard from '../../components/DomainsCard.astro';
-const allPosts = await Astro.glob('../../pages/domains/*.md');
+import DomainPost from '../../components/DomainPost.astro';
+const allDomains = await Astro.glob('../../pages/domains/*.md');
 const pageTitle = "Domains";
 ---
 
@@ -12,6 +11,6 @@ const pageTitle = "Domains";
 
     <p>This is where I will post about my journey learning Astro.</p>
     <ul>
-        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+        {allDomains.map((post) => <DomainPost post={post} />)}
     </ul>
 </BaseLayout>

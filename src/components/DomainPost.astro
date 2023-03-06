@@ -1,0 +1,10 @@
+---
+import DomainsCard from "./DomainCard.astro";
+const { post } = Astro.props;
+---
+<DomainsCard 
+    title={post.frontmatter.title}
+    href={post.url}
+    description={post.frontmatter.description}
+    tags={post.frontmatter.tags}
+/>

@@ -3,23 +3,23 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-<p>Create on : {frontmatter.pubDate.slice(0,10)}</p>
-<p>Lastest Update on : {frontmatter.pubDate.slice(0,10)}</p>
-<p><em>{frontmatter.description}</em></p>
-<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+<p>Created on : {frontmatter.pubDate.slice(0,10)}</p>
+<p class="lstupDate">Lastest Update on : <div class="lstupDate">{frontmatter.lstupDate.slice(0,10)}</div></p>
 <div class="tags">
     {frontmatter.tags.map((tag) => (
         <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
     ))}
 </div>
-
+<h2>What's {frontmatter.title}</h2>
 <slot />
 </BaseLayout>
 <style>
+div.lstupDate:empty {
+    display: none;
+}
 a {
     color: #00539F;
 }
-            
 .tags {
     display: flex; 
     flex-wrap: wrap; 

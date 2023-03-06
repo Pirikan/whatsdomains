@@ -1,22 +1,20 @@
 ---
 export interface Props {
 	title: string;
-	body: string;
-	url: string;
+	tags: string;
+	description: string;
+	href: string;
 }
 
-const { url, title, body } = Astro.props;
+const { href, title, tags, description } = Astro.props;
 ---
 
 <li class="link-card">
-	<a href={url}>
+	<a href={href}>
 		<h2>
 			{title}
-			<span>&rarr;</span>
 		</h2>
-		<p>
-			{body}
-		</p>
+				<p >{description}</p>
 	</a>
 </li>
 <style>
@@ -26,15 +24,15 @@ const { url, title, body } = Astro.props;
 		padding: 0.25rem;
 		background-color: white;
 		background-image: none;
-		background-size: 400%;
+		background-size: 200%;
 		border-radius: 0.6rem;
 		background-position: 100%;
 		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+		margin-bottom: 1rem;
 	}
-
 	.link-card > a {
-		width: 100%;
+		width: 80%;
 		text-decoration: none;
 		line-height: 1.4;
 		padding: 1rem 1.3rem;
@@ -45,7 +43,7 @@ const { url, title, body } = Astro.props;
 	}
 	h2 {
 		margin: 0;
-		font-size: 1.25rem;
+		font-size: 1.9rem;
 		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 	p {
@@ -61,3 +59,4 @@ const { url, title, body } = Astro.props;
 		color: rgb(var(--accent));
 	}
 </style>
+

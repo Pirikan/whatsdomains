@@ -4,7 +4,7 @@
 }
 
 html {
-    background-color: #f1f5f9;
+    background-color: #def0eb;
     font-family: sans-serif;
 }
 
@@ -59,7 +59,9 @@ h1 {
 }
 
 .nav-links a:hover, a:focus {
-    background-color: #ff9776;
+    background-color: #862307fd;
+    color: whitesmoke;
+    border-radius: 0.8rem;
 }
 
 .logo {
@@ -90,9 +92,7 @@ h1 {
     .hamburger {
         display: none;
     }
-    .logo a {
-        font-size: smaller;
-    } 
+    
 }
 
 html.dark {
