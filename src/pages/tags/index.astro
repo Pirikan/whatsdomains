@@ -1,6 +1,6 @@
 --- 
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const allBlogs = await Astro.glob('../blogs/*.md');
+const allBlogs = await Astro.glob('../blog/*.md');
 const allDomains = await Astro.glob('../domains/*.md');
 const Blogtags = [...new Set(allBlogs.map((post) => post.frontmatter.tags).flat())];
 const Domaintags = [...new Set(allDomains.map((post) => post.frontmatter.tags).flat())];

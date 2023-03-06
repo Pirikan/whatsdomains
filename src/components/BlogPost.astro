@@ -1,4 +1,10 @@
 ---
-const { title, url } = Astro.props;
+import BlogsCard from "./BlogCard.astro";
+const { post } = Astro.props;
 ---
-<li><a href={url}>{title}</a></li>
+<BlogsCard 
+    title={post.frontmatter.title}
+    href={post.url}
+    description={post.frontmatter.description}
+    tags={post.frontmatter.tags}
+/>
