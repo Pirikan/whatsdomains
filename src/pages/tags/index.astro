@@ -7,20 +7,23 @@ const Domaintags = [...new Set(allDomains.map((post) => post.frontmatter.tags).f
 const pageTitle = "Tag Index";
 ---
 <BaseLayout pageTitle={pageTitle}>
+  <h2>Domains Tags</h2>
   <div class="tags">
-    {Blogtags.map((tag) => (
+    {Domaintags.map((tag) => (
       <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
     ))}
   </div>
+  <h2>Blog Tags</h2>
   <div class="tags">
-    {Domaintags.map((tag) => (
+    {Blogtags.map((tag) => (
       <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
     ))}
   </div>
 </BaseLayout>
 <style>
   a {
-    color: #00539F;
+    text-decoration: none;
+    color: black;
   }
 
   .tags {
@@ -28,7 +31,9 @@ const pageTitle = "Tag Index";
     flex-wrap: wrap; 
     margin: 0 auto;  
   }
-
+  .tags :hover, :focus {
+    background-color: #86200369;
+  }
   .tag {
     margin: 0.25em;
     border: dotted 1px #a1a1a1;

@@ -42,7 +42,7 @@ h1 {
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #ff9776;
+    background-color: #86200369;
     display: none;
     margin: 0;
 }
@@ -59,8 +59,7 @@ h1 {
 }
 
 .nav-links a:hover, a:focus {
-    background-color: #862307fd;
-    color: whitesmoke;
+    background-color: #86200369;
     border-radius: 0.8rem;
 }
 
@@ -96,7 +95,7 @@ h1 {
 }
 
 html.dark {
-    background-color: #0d0950;
+    background-color: #61706c;
     color: #fff;
   }
   
