@@ -3,20 +3,40 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-<p>Created on : {frontmatter.pubDate.slice(0,10)}</p>
-<p class="lstupDate">Lastest Update on : <div class="lstupDate">{frontmatter.lstupDate.slice(0,10)}</div></p>
+<div class="Date">
+    <p class="PublishedDate"><span class="material-symbols-outlined PublishedDate" id="PublishedDateIcon">
+        publish
+        </span> <span class="PublishedDate" id="PublishedDateDate">{frontmatter.pubDate.slice(0,10)}</span></p>
+    <div class="RePublishedDate" id="div_RePublishedDate" style="display: {isRePublishedDate ? 'block' : 'none'};">
+        <p class="RePublishedDate"><span class="material-symbols-outlined RePublishedDate" id="RePublishedDateIcon">
+            published_with_changes
+            </span> <span class="RePublishedDate" id="RePublishedDateDate">{frontmatter.lstupDate.slice(0,10)}</span></p>
+    </div>
+</div>
 <div class="tags">
-    {frontmatter.tags.map((tag) => (
+    {frontmatter.tags.map((tag: unknown) => (
         <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
     ))}
 </div>
 <h2>What's {frontmatter.title}</h2>
 <slot />
 </BaseLayout>
+<script>
+    import "../scripts/RePublihsedDate.js";
+</script>
 <style>
-div.lstupDate:empty {
-    display: none;
+.Date {
+    display: flex;
+    gap: 0.7rem;
 }
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48f
+}
+
 a {
     color: #00539F;
 }

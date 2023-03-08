@@ -1,8 +1,8 @@
 ---
-import BlogsCard from "./BlogCard.astro";
+import BlogCard from "./BlogCard.astro";
 const { post } = Astro.props;
 ---
-<BlogsCard 
+<BlogCard 
     title={post.frontmatter.title}
     href={post.url}
     description={post.frontmatter.description}
