@@ -1,0 +1,8 @@
+---
+import OthersCard from "./OthersCard.astro";
+const { post } = Astro.props;
+---
+<OthersCard 
+    title={post.frontmatter.pageTitle}
+    href={post.url}
+/>

@@ -1,7 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Welcome";
+import BaseLayout from '../layouts/BaseLayout-Home.astro';
+const pageTitle = "HOME";
+const lang = "en";
+const AccessRanking = "Access Ranking"
 ---
-<BaseLayout pageTitle={pageTitle}>
-	<h2>My awesome blog subtitle</h2>
+<BaseLayout pageTitle={pageTitle} lang={lang} AccessRanking={AccessRanking}>
+	
 </BaseLayout>

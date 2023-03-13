@@ -1,0 +1,23 @@
+/* black and White */
+/* デフォルトの配色を定義 */
+:root {
+    --c-Main: black;
+    --c-Background: #fff;
+    --c-ClearClor: #d4c9ab69;
+    --c-CardMain: #111;
+    --c-CardBackground: #f5f0f0;
+    --c-CardDiscription: #444;;
+    --c-BorderMain: #000;
+}
+  /* ダークモード時に配色が入れ替わるように設定 */
+html.dark {
+    --c-Main: #fff;
+    --c-Background: #000000;
+    --c-ClearClor: #dba61369;
+    --c-CardMain: #ffffff;
+    --c-CardBackground: #424242;
+    --c-CardDiscription: whitesmoke;;
+    --c-BorderMain: #fff;
+}
+
+@import url(./global.css);

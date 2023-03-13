@@ -1,11 +1,20 @@
+@import url(./Q3.css);
+
 @font-face {
 	font-family: 'CrimsonText';
-	src: url(../layouts/fonts/CrimsonText/CrimsonText-SemiBold.ttf);
+	src: url(../layouts/fonts/CrimsonText/CrimsonText-SemiBold-VF.woff2)format("woff2"),
+        url(../layouts/fonts/CrimsonText/CrimsonText-SemiBold-VF.eot)format("embedded-opentype");
+}
+@font-face {
+    font-family: "NotoSans-JP-VF";
+    src:url(../layouts/fonts/NotoSans-JP-VF/NotoSansJP-VF.woff)format("woff");
 }
 
+
 html {
-    background-color: #def0eb;
-    font-family: sans-serif;
+    background-color: var(--c-Background);
+    color: var(--c-Main);
+    font-family: "NotoSans-JP-VF";
 }
 
 body {
@@ -36,48 +45,48 @@ h1 {
     width: 40px;
     height: 5px;
     margin-bottom: 10px;
-    background-color: #86200369;
+    background-color: var(--c-ClearClor);
+    border: 1px solid var(--c-BorderMain);
 }
 .nav-links {
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #86200369;
     display: none;
-    margin: 0;
+    text-align:  center;
 }
 
-.nav-links a {
-    color: black;
+.nav-links > a {
+    color: var(--c-Main);
     display: block;
-    text-align: center;
     padding: 10px 0;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
+    border-radius: 0.8rem;
     text-transform: uppercase;
 }
 
-.nav-links a:hover, a:focus {
-    background-color: #86200369;
-    border-radius: 0.8rem;
+.nav-links :is(a:hover, a:focus) {
+    background-color: var(--c-ClearClor);
+    border: 0.1rem solid var(--c-BorderMain);
 }
 
 .logo {
-    color: black;
+    color: var(--c-Main);
     text-align: center;
     text-decoration: none;
     font-family: 'CrimsonText';
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .expanded {
     display: unset;
 }
 
-
 @media screen and (min-width: 636px) {
     .nav-links {
-        margin-left: 5em;
         display: block;
         position: static;
         width: auto;
@@ -91,18 +100,55 @@ h1 {
     .hamburger {
         display: none;
     }
-    
+    .Domain-link-cards {
+        display: flex;
+        position: static;
+    }
+    .Domain-link-card {
+        width: 45%;
+        margin-inline: 2.5%;
+    }
 }
+@media screen and (max-width: 636px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .nav-links > a {
+        font-size: 1.1rem;
+    
+    }
+    .hamburger {
+        float: left;
+    }
+    .Blog-link-card h2{
+        font-size: 1.5rem;
+    }
+    .index-link-cards {
+        padding-inline-start: 0;
+    }
+}
+@media screen and (min-width: 360px) {
+    .Domain-link-card {
+        display: flex;
+    }
+}
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    .Blog-link-card h2{
+        font-size: 1.35rem;
+    }
 
-html.dark {
-    background-color: #61706c;
-    color: #fff;
-  }
-  
-  .dark .nav-links a{
-    color: #fff;
-  }
-
-  .dark .logo{
-    color: #fff;
-  }
+}
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .Blog-link-card h2{
+        font-size: 1.3rem;
+    }
+    li.Domain-link-card {
+        background: linear-gradient(180deg, var(--c-ClearClor) 0%, var(--c-ClearClor) 50%, var(--c-CardBackground) 50%, var(--c-CardBackground) 100%);
+    }
+}

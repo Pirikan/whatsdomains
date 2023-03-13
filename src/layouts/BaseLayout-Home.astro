@@ -1,0 +1,27 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+const { pageTitle } = Astro.props;
+const { AccessRanking } = Astro.props;
+const { lang } = Astro.props;
+---
+<html lang={lang}>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle} - What's domain.com</title>
+</head>
+<body>
+    <Header />
+    <h1>{AccessRanking}</h1>
+    <slot />
+    <Footer />
+    <script>
+        import "../scripts/menu.js";
+    </script>
+</body>
+</html>

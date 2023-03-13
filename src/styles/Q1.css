@@ -1,0 +1,22 @@
+/*ChocoMint*/
+:root {
+    --c-Main: black;
+    --c-Background: #def0eb;
+    --c-ClearClor: #86200369;
+    --c-CardMain: #111;;
+    --c-CardBackground: white;
+    --c-CardDiscription: #444;;
+    --c-BorderMain: #000;
+}
+/*DarkMode*/
+html.dark {
+    --c-Main: #fff;
+    --c-Background: #61706c;
+    --c-ClearClor: #bb310b69;
+    --c-CardMain: #faf1f1;
+    --c-CardBackground: #3d3232;
+    --c-CardDiscription: whitesmoke;
+    --c-BorderMain: #fff;
+}
+
+@import url(./global.css);

@@ -1,0 +1,20 @@
+/*Orange*/
+:root {
+    --c-Main: black;
+    --c-Background: #f68000;
+    --c-ClearClor: #526488;
+    --c-CardMain: #131010;;
+    --c-CardBackground: #fff0e0;
+    --c-CardDiscription: #444;;
+    --c-BorderMain: #000;
+}
+/*DarkMode*/
+html.dark {
+    --c-Main: #fff;
+    --c-Background: #61706c;
+    --c-ClearClor: #bb310b69;
+    --c-CardMain: #faf1f1;
+    --c-CardBackground: #3d3232;
+    --c-CardDiscription: whitesmoke;
+    --c-BorderMain: #fff;
+}

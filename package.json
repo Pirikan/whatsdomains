@@ -10,6 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.17"
+    "@astrojs/cloudflare": "^6.2.0",
+    "@babel/core": "^7.21.0",
+    "astro": "^2.1.2",
+    "sourcemap-codec": "^1.4.8"
+  },
+  "devDependencies": {
+    "rollup-plugin-inject": "^3.0.2",
+    "sass": "^1.59.2",
+    "wrangler": "^2.12.2"
   }
 }

@@ -3,14 +3,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import DomainPost from '../../components/DomainPost.astro';
 const allDomains = await Astro.glob('../../pages/domains/*.md');
 const pageTitle = "Domains";
+const lang = "en";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} lang={lang}>
     
-
-
-    <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
+    <ul class="index-link-cards Domain-link-cards">
         {allDomains.map((post) => <DomainPost post={post} />)}
     </ul>
 </BaseLayout>
