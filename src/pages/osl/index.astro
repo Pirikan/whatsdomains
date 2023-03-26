@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import OthersPost from '../../components/OthersPost.astro';
+const allosl = await Astro.glob('../../pages/osl/*.md');
+const pageTitle = "Open Souce Lisence";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <ul class="index-link-cards">
+        {allosl.map((post) => <OthersPost post={post} />)}
+    </ul>
+</BaseLayout>
+<style>.index-link-cards {font-size: 0.5rem;}</style>

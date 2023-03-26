@@ -2,8 +2,8 @@
 /* デフォルトの配色を定義 */
 :root {
     --c-Main: black;
-    --c-Background: #fff;
-    --c-ClearClor: #d4c9ab69;
+    --c-Background: whitesmoke;
+    --c-ClearClor: #111;
     --c-CardMain: #111;
     --c-CardBackground: #f5f0f0;
     --c-CardDiscription: #444;;
@@ -14,7 +14,7 @@
 html.dark {
     --c-Main: #fff;
     --c-Background: #000000;
-    --c-ClearClor: #dba61369;
+    --c-ClearClor: whitesmoke;
     --c-CardMain: #ffffff;
     --c-CardBackground: #424242;
     --c-CardDiscription: whitesmoke;;

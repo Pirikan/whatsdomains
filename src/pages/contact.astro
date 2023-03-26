@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Contact";
+const lang = "en"
+---
+
+
+<BaseLayout pageTitle={pageTitle} lang={lang}>
+<form>
+    <label>
+        Name:
+        <input type="text" name="Name" />
+    </label>
+    <label>
+        Email:
+        <input type="email" name="email" />
+    </label>
+</form>
+
+    <style>
+
+    </style>
+</BaseLayout>

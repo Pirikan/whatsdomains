@@ -67,9 +67,9 @@ h1 {
     text-transform: uppercase;
 }
 
-.nav-links :is(a:hover, a:focus) {
-    background-color: var(--c-ClearClor);
-    border: 0.1rem solid var(--c-BorderMain);
+.nav-links a:hover {
+    background-color: var(--c-CardMain);
+    color: var(--c-CardBackground);
 }
 
 .logo {

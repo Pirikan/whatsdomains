@@ -1,10 +1,10 @@
 ---
-layout: ../../../layouts/MarkdownOSLLayout.astro
-title: 'SIL OPEN FONT LICENSE Version 1.1'
+layout: ../../layouts/MarkdownOSLLayout.astro
+title: 'SIL OPEN FONT LICENSEVersion 1.1'
 lang: "en"
 ---
 Copyright 2010 The Crimson Text Project Authors 
-(https://github.com/googlefonts/Crimson)  
+[https://github.com/googlefonts/Crimson](https://github.com/googlefonts/Crimson){:target="_blank"} 
 Copyright 2022 Noto Sans CJK Version 2.004<br>(https://github.com/notofonts/noto-cjk)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.

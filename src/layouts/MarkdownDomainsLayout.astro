@@ -21,10 +21,19 @@ const { frontmatter } = Astro.props;
 </div>
 -->
 <h2>What’s {frontmatter.title}</h2>
+<h1>The current URL is: {Astro.url}</h1>
+<h1>The current URL pathname is: {Astro.url.pathname}</h1>
+<h1>The current URL origin is: {Astro.url.origin}</h1>
 <slot />
+<div class="CopyLink">
+<input id="PathName" type="text" value={Astro.url.pathname} readonly>
+</div>
+<button class="Button-Action"  id="CopyLink-Button" type="button">Copy Link</button>
+
 </BaseLayout>
 <script>
     import "../scripts/RePublihsedDate.js";
+    import "../scripts/CopyLink.js";
 </script>
 <style>
 .Date {
@@ -41,6 +50,10 @@ const { frontmatter } = Astro.props;
 
 a {
     color: #00539F;
+}
+.CopyLink {
+    position: absolute;
+    opacity: 0;
 }
 .tags {
     display: flex; 

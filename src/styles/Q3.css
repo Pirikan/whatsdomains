@@ -7,14 +7,16 @@
     --c-CardBackground: #fff0e0;
     --c-CardDiscription: #444;;
     --c-BorderMain: #000;
+    --c-Shadow: #232323;
 }
 /*DarkMode*/
 html.dark {
     --c-Main: #fff;
-    --c-Background: #61706c;
-    --c-ClearClor: #bb310b69;
-    --c-CardMain: #faf1f1;
-    --c-CardBackground: #3d3232;
-    --c-CardDiscription: whitesmoke;
+    --c-Background: #9c5203;
+    --c-ClearClor: #526488;
+    --c-CardMain: #fdfafa;
+    --c-CardBackground: #7a6e60;
+    --c-CardDiscription: #ffffff;
     --c-BorderMain: #fff;
+    --c-Shadow: #999898;
 }

@@ -11,10 +11,11 @@ const { href, title, tags, description } = Astro.props;
 
 <li class="link-card Domain-link-card">
 	<a href={href}>
-		<h2>
+		<h2 >
 			{title}
 		</h2>
-				<p >{description}</p>
+		<hr />
+		<p >{description}</p>
 	</a>
 </li>
 <style>
@@ -28,13 +29,13 @@ const { href, title, tags, description } = Astro.props;
 		border-radius: 0.6rem;
 		background-position: 100%;
 		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: 0 4px 6px -1px var(--c-Shadow), 0 2px 4px -2px var(--c-Shadow);
 		margin-bottom: 1rem;
 		justify-content: center;
-		background: linear-gradient(180deg, var(--c-ClearClor) 0%, var(--c-ClearClor) 55%, var(--c-CardBackground) 55%, var(--c-CardBackground) 100%);
+		border: 0.1rem solid var(--c-BorderMain);
 	}
 	.link-card > a {
 		width: 100%;
+		border-radius: 0.4rem;
 		text-decoration: none;
 		padding: 1rem 1.3rem;
 		color: var(--c-CardMain);
@@ -44,19 +45,17 @@ const { href, title, tags, description } = Astro.props;
 	h2 {
 		margin: 0;
 		font-size: 2.0rem;
-		transition: color 6s cubic-bezier(0.22, 1, 0.36, 1);
-		background-size: 200%;
+		transition: color cubic-bezier(0.22, 1, 0.36, 1);
 		border-radius: 0.6rem;
 		text-align: center;
 	}
 	p {
 		margin-top: 1.5rem;
 		margin-bottom: 0;
-		color: var(--c-CardDiscription);
 	}
-	.link-card:is(:hover, :focus-within) {
-		background-size: calc(100% - 0.2rem);
-		border: 0.1rem solid var(--c-BorderMain);
+	.link-card:hover a {
+		background-color: var(--c-CardMain);
+		color: var(--c-CardBackground);
 	}
 	
 </style>

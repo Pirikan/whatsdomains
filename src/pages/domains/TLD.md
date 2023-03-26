@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownDomainsLayout.astro
-title: '.com'
+title: 'TLD'
 pubDate: 2022-07-01
 lstupDate: ""
 description: 'This is the first post of my new Astro blog.'
@@ -13,6 +13,4 @@ tags: ["TLD", "com"]
 2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
 
 3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-
 

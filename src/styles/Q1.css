@@ -7,6 +7,7 @@
     --c-CardBackground: white;
     --c-CardDiscription: #444;;
     --c-BorderMain: #000;
+    --c-Shadow: #232323;
 }
 /*DarkMode*/
 html.dark {
@@ -17,6 +18,5 @@ html.dark {
     --c-CardBackground: #3d3232;
     --c-CardDiscription: whitesmoke;
     --c-BorderMain: #fff;
+    --c-Shadow: #999898;
 }
-
-@import url(./global.css);
