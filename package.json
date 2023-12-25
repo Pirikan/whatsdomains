@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^6.2.0",
+    "@astrojs/cloudflare": "^6.8.1",
     "@babel/core": "^7.21.0",
-    "astro": "^2.1.2",
+    "astro": "^3.5.5",
     "sourcemap-codec": "^1.4.8"
   },
   "devDependencies": {
